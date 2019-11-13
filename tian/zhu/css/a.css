@@ -1,0 +1,26 @@
+*{width: 1263px;margin:0 auto;}
+
+header{height:26px;background: lightgray;}
+header .header-a{width:300px;float: left;}
+header .header-a a img{width:20px;height:20px;padding:4px 10px 0 ;float: left;}
+header .header-b{width: 400px;float: right;padding-right:100px;}
+header .header-b a{font:12px/26px "";}
+
+.banner{width: 970px;}
+.banner img{width:200px;height:45px;margin:30px auto;}
+
+.yonhu{width:134px;border:1px solid #ccc;position: absolute;left:141px;background:#fff;border-bottom: none;}
+.yonhu p{font:20px/30px "";padding-left:25px;color:red;}
+
+footer{width:980px;height:561px;border:1px solid #ccc;margin-top:29px;}
+
+footer #footer-a{width: 640px;float: left;}
+footer #footer-a .span{width: 130px;height:561px;float: left;}
+footer #footer-a .span span{float:left;margin:32px 0 32px 50px;}
+footer #footer-a #input{width:500px;height:523px;float:left;border-right:1px solid #ccc;}
+footer #footer-a #input input{width:275px;height:34px;margin:20px 0;}
+footer #footer-a #input #tonyi{background:red;color:#fff;border:none;}
+
+footer .footer-b{width:246px;height:104px;float:right;margin-right:40px;padding-top:40px;border-bottom:1px solid #ccc;}
+footer .footer-b p{font:16px/30px "";color:#000;padding:0 0 20px 40px;}
+footer .footer-b input{width: 134px;height:33px;color:red;margin:0 0 0 40px;}

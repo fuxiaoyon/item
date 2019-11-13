@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/m.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-a">
+            <a href="https://www.sina.com.cn/"><img src="imgs/1.jpg"></a>
+            <a href="https://wx.qq.com/"><img src="imgs/2.png"></a>
+            <a href="https://i.qq.com/"><img src="imgs/3.png"></a>
+        </div>
+        <div class="header-b">
+            <a href="#">你好，欢迎来到天虹</a>
+            <a href="#">[登录]</a>
+            <a href="http://localhost/tian/zhu/load.html">[注册]</a>
+            <span>|</span>
+            <a href="#">我的订单</a>
+            <span>|</span>
+            <a href="#">我的天虹</a>
+            <span>|</span>
+            <a href="#">客户服务</a>
+            </ul>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="imgs/logo_hlj.png">
+    </div>
+
+    <div class="scan">
+        <div class="scan-a">
+            <img src="https://img1.tianhong.cn/upload/mimage/ad/201811/pHhEvQ7ORno4O1mJLVeTfbNz.png" alt="下载APP">
+        </div>
+        <div id="scan-b">
+            <p>用户名/邮箱/验证手机</p>
+            <input type="text" class="text" id="username">
+            <p></p>
+            <p>密码</p>
+            <input type="text" class="text" id="password">
+            <input type="checkbox" value="1" class="checkbox">
+            <i></i>
+            <a href="#">记住密码</a>
+            <a href="#" class="forget">忘记密码?</a>
+            <a href="">
+                <input type="button" value="登录" class="button" id="login"><span></sapn>
+            </a>
+            <div id="scan-b-1">
+                <p>使用合作网站登录天虹：</p>
+                <a href="https://www.sina.com.cn/">
+                    <img src="imgs/1.jpg">新浪微
+                </a>
+                <span>|</span>
+                <a href="">
+                    <img src="../imgs/6.jpg">QQ
+                </a>
+            </div>
+            <div class="scan-b-2">
+                <span>还没有天虹账号?</span>
+                <a href="http://localhost/tian/zhu/load.html">
+                    <input type="button" value="注册新账号" class="zhuce">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../js/ajax.js"></script>
+<script>
+    if (window.localStorage.userArr) {
+        var array = JSON.parse(window.localStorage.userArr);
+    } else {
+        array = [];
+    }
+    //登录
+    document.getElementById('login').onclick = function () {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var isHad = false;
+        var index = 0; 
+     
+        for (var i = 0; i < array.length; i++) {
+            if (username == array[i].username) {
+                isHad = true;
+                index = i;
+            }
+        }
+        if (isHad) {
+            if (password == array[index].password) {
+                alert("登录成功");
+            } else {
+                alert("密码错误");
+            }
+        } else {
+            alert('账号不存在或输入错误');
+        }
+    }
+</script>
+
+</html>

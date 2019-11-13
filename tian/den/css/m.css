@@ -1,0 +1,28 @@
+*{width: 1263px;margin:0 auto;}
+
+header{height:26px;background: lightgray;}
+header .header-a{width:300px;float:left;}
+header .header-a a img{width:20px;height:20px;padding:4px 10px 0 ;float: left;}
+header .header-b{width: 400px;float: right;padding-right:100px;}
+header .header-b a{font:12px/26px "";}
+
+.banner{width:970px;margin:0 auto;padding:30px 0 20px 0;}
+.banner img{width:300px;height:63px;}
+
+.scan{width:970px;height:432px;border:2px solid #ccc;margin-top:20px;}
+.scan .scan-a img{width:560px;height:432px;float:left;}
+
+.scan #scan-b{width: 380px;height: 365px;float: right;padding-top:40px;border-left:1px solid #ccc;padding-left:10px;}
+.scan #scan-b .text{width: 275px;height: 26px;margin:0 55px 40px 30px;}
+.scan #scan-b p{font:20px/24px "";color:#ccc;padding:0 0 0 30px;}
+.scan #scan-b .checkbox{width:15px;height:15px;margin:10px 0  0 30px;}
+.scan #scan-b .forget{color:#000;}
+.scan #scan-b .button{width:275px;height:35px;background:red;color:#fff;border:none;margin:20px 0 0 30px;}
+
+.scan #scan-b #scan-b-1{width: 345px;height:57px;float: left;padding-top:10px;border-bottom:1px dashed #ccc;}
+.scan #scan-b #scan-b-1 p{font:12px/20px "";color:#000;padding-bottom:10px;}
+.scan #scan-b #scan-b-1 a img{width:20px;height: 20px;padding-left:10px;}
+
+.scan #scan-b .scan-b-2{width: 345px;height: 33px;float:left;}
+.scan #scan-b .scan-b-2 span{margin-left:40px;}
+.scan #scan-b .scan-b-2 .zhuce{width:134px;height: 33px;float:right;margin-right:60px;color:red;}

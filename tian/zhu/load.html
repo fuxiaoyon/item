@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/a.css" />
+</head>
+<body>
+        <header>
+                <div class="header-a">
+                    <a href="https://www.sina.com.cn/"><img src="imgs/1.jpg"></a>
+                    <a href="https://wx.qq.com/"><img src="imgs/2.png"></a>
+                    <a href="https://i.qq.com/"><img src="imgs/3.png"></a>
+                </div>
+                <div class="header-b">
+                        <a href="#">你好，欢迎来到天虹</a>
+                        <a href="http://localhost/tian/den/register.html">[登录]</a>
+                        <a href="#">[注册]</a>
+                        <span>|</span>
+                        <a href="#">我的订单</a>
+                        <span>|</span>
+                        <a href="#">我的天虹</a>
+                        <span>|</span>
+                        <a href="#">客户服务</a>
+                    </ul>
+                </div>
+            </header>
+            <div class="banner">
+                <img src="imgs/logo_hlj.png">
+            </div>
+            
+            <div class="yonhu">
+                <p>用户注册</p>
+            </div>
+
+            <footer>
+                <div id="footer-a">
+                    <div class="span">
+                            <span>*账号:</span>       
+                            <span>*请设置密码:</span> 
+                            <span>*请确认密码:</span> 
+                         
+                    </div>
+                    <div id="input">
+                        <input type="text" id="username">
+                        <input type="passowrd" id="password">
+                        <input type="text">
+                        <a href="">
+                            <input type="button" value="同意以上协议并注册" id="regist">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-b">
+                    <p>你还没有天虹账号？</p>
+                    <a href="http://localhost/tian/den/register.html">
+                        <input type="button" value="立即登录">
+                    </a>
+                </div>
+            </footer>
+</body>
+<script>
+    if (window.localStorage.userArr) {
+        var array = JSON.parse(window.localStorage.userArr);
+    } else {
+        array = [];
+    }
+  
+    document.getElementById('regist').onclick = function () {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        for (var i = 0; i < array.length; i++) {
+            if (username == array[i].username) {
+                alert("该账号已存在");
+                return;
+            }
+        }
+
+        var obj = { username: username, password: password, score: 0 }
+        array.push(obj);
+        window.localStorage.userArr = JSON.stringify(array);
+        alert("用户创建成功");
+    }
+</script>
+</html>

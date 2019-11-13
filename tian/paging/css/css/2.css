@@ -1,0 +1,59 @@
+.margin{width: 1263px;margin:0 auto;}
+
+
+header{height:26px;background: lightgray;}
+header .header-a{width:300px;float:left;margin-left:20px;}
+header .header-a a img{width:20px;height:20px;padding:4px 10px 0 ;float: left;}
+header .header-b{width:500px;float: right;padding-right:50px;}
+header .header-b a{font:12px/26px "";}
+
+
+.title{height:88px;margin-bottom:40px;}
+.title .title-a{width:288px;float: left;margin:14px 40px 0 30px;}
+.title .title-a img{width:288px;height:50px;}
+.title .title-b{width:600px;float: left;height:60px;padding-top:20px;overflow: hidden;}
+.title .title-b input{width:454px;height:24px;border:2px solid #96843A;float:left;padding:4px;}
+.title .title-b .button{width:70px;height:36px;background:#96843A;color:#fff;float:left;margin-right:60px;}
+.title .title-b span{font:12px/24px "";}
+.title .title-b a{font:12px/24px "";margin:0 3px;}
+.title .title-c{width:146px;height:32px;background:#e3e3e3;float: left;margin:20px 0 0 60px;}
+.title .title-c img{width:26px;height:16px;float: left;padding-top:8px;}
+.title .title-c a{font:12px/32px "";padding:0 0 0 10px;color:#666;}
+.title .title-c a:hover{color:red;}
+
+
+
+nav{height:36px;border-bottom:2px solid #96843A;}
+nav .app{width:800px;height:36px;margin:0 auto;padding-right:400px;}
+nav .app p{width:190px;font:14px/36px "";float: left;background:#96843A;color:#fff;text-align: center;}
+nav .app a{color:#666;}
+nav .app a span{font:16px/38px "";padding:0 20px;}
+nav .app a:hover{color:red;}
+
+
+#str{height:30px;margin:10px 0 ;}
+#str h3{font:20px/30px "";float: left;padding-left:40px;}
+#str a{float: left; font:13px/30px "";}
+
+
+#cengter #fang{width:395px;height:600px;padding-left:40px;}
+#cengter #fang .box {display: none;position: absolute;top:100px;left: 0;width: 230px;height: 230px;background: url(../../imgs/dotpng.png)}
+#cengter #fang #wrap{width: 388px;height: 388px;position: absolute;top:230;left:40px;border: 1px solid #000;}
+#cengter #fang #wrap img{width:388px;height:388px;} 
+#cengter #fang #bigArea {display: none;width:388px;height:388px;position: absolute;top:240px;left: 440px;background: url(../../imgs/3.jpg) no-repeat;border: 1px solid #000;}
+#cengter #fang .fang-a{width:388px;height:70px;position: absolute;top:650px;left:40px}
+#cengter #fang .fang-a span{display:block;float:left;width:20px;background:#e7e7e7;color:#fff;font:14px/70px "";}
+#cengter #fang .fang-a img{float:left;width:70px;height:70px;border:1px solid #000 ;margin:0 4px;}
+#cengter #fang .fang-a span.te{float:right;}
+
+
+
+
+
+
+
+
+
+
+
+
