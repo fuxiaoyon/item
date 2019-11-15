@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css/shopin.css">
+    <link rel="stylesheet" href="../css/public.css">
+</head>
+
+<body>
+    <header>
+        <div class="header margin">
+            <div class="header-a">
+                <a href="https://www.sina.com.cn/"><img src="../imgs/1.jpg"></a>
+                <a href="https://wx.qq.com/"><img src="../imgs/2.png"></a>
+                <a href="https://i.qq.com/"><img src="../imgs/3.png"></a>
+            </div>
+            <div class="header-b">
+                <a href="#">你好，欢迎来到天虹</a>
+                <a href="http://localhost/1910-php/tian/den/register.html">[登录]</a>
+                <a href="http://localhost/tian/zhu/load.html">[注册]</a>
+                <span>|</span>
+                <a href="#">我的订单</a>
+                <span>|</span>
+                <a href="#">我的天虹</a>
+                <span>|</span>
+                <a href="#">客户服务</a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="logo" class="margin">
+        <div class="logo-a">
+            <img src="../imgs/logo_hlj.png" alt="">
+        </div>
+
+    </div>
+
+    <div id="te" class="margin">
+        <span class="te1">运费说明</span>
+        <span>自营商品满额可享受运费优惠，深圳市自提实付满59元免运费；商家自配送商品以商家运费规则为准。详见 配送运费标准。</span>
+    </div>
+
+    <div id="shopin" class="margin">
+        <div class="shopin-a">
+            <div class="shopin-a-1">
+                <ul>
+                    <li><input type="checkbox" class="te"><span>全选</span></li>
+                    <li class="p">商品信息</li>
+                    <li>价格</li>
+                    <li>数量</li>
+                    <li>小计</li>
+                    <li>操作</li>
+                </ul>
+            </div>
+
+                <table>
+                        <tbody>
+                            <!-- <tr>
+                                <td><img src="" alt=""></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="number"" min="1"></td>
+                                <td><span>删除</span></td>
+                            </tr> -->
+                
+                        </tbody>
+                    </table>
+        </div>
+
+        <div class="shopin-c">
+            <div class="shopin-c-1">
+                <input type="checkbox">
+                <span>全选</span>
+                <span>批量删除</span>
+                <span>清空购物车</span>
+                <span>继续购物</span>
+            </div>
+
+            <div class="shopin-c-2">
+                <span>已选择<i></i> 商品</span>
+                <span>总价(不含运费)</span>
+                <span class="shopin-c-2-1"></span>
+                <input type="button" value="去结算》》">
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="margin">
+        <div class="footer-a">
+            <a href="">大客户服务</a>
+            <span>|</span>
+            <a href="">天虹门户</a>
+            <span>|</span>
+            <a href="">关于我们</a>
+            <span>|</span>
+            <a href="">质量价格保障</a>
+            <span>|</span>
+            <a href="">开放平台规则</a>
+            <span>|</span>
+            <a href="">友情链接</a>
+            <span>|</span>
+            <a href="">品牌招商</a>
+        </div>
+
+        <div class="footer-b">
+            <sapn>粤ICP备11065574号-7</sapn>
+            <sapn>营业执照</sapn>
+            <sapn>用户使用条款和隐私政策</sapn>
+            <sapn>Copyright© 天虹 2009-2019, All Rights Reserved</sapn>
+            <sapn>天虹商场股份有限公司 版权所有 </sapn>
+        </div>
+
+        <div class="footer-c">
+            <img src="http://www.tianhong.cn/resource/images/wangan2.gif" alt="">
+            <img src="http://www.tianhong.cn/resource/images/kexin.gif" alt="">
+            <img src="http://www.tianhong.cn/resource/images/ylimg.gif" alt="">
+            <img src="http://www.tianhong.cn/resource/images/zhongxin.gif" alt="">
+            <img src="http://www.tianhong.cn/resource/images/newGovIcon.gif" alt="">
+            <img src="http://www.tianhong.cn/resource/images/wangan.png" alt="">
+            <span>粤公网安备 44030502001023号</span>
+        </div>
+    </footer>
+</body>
+<script src="../ajax.js"></script>
+<script src="../cookie.js"></script>
+<script>
+  class Car{
+        constructor(options){
+            this.url = options.url;
+            this.tbody = options.tbody;
+            this.load();
+            this.addEvent();
+            
+        }
+        load(){
+            var that = this;
+            ajaxGet(this.url,function(res){
+                that.res = JSON.parse(res);
+                that.getCookie();
+            })
+        }
+        getCookie(){
+            this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+            this.display();
+        }
+       display(){
+             var str = "";
+             for(var i=0;i<this.res.length;i++){
+                 for(var j=0;j<this.goods.length;j++){
+                     if(this.res[i].goodsId === this.goods[j].id){
+                         str += `<tr index="${this.goods[j].id}">
+                                    <td><input type="checkbox" class="te"></td>
+                                    <td><img src="${this.res[i].img}" alt=""></td>
+                                    <td><p>${this.res[i].name}</p></td>
+                                    <td>${this.res[i].price}</td>
+                                    <td></td>
+                                    <td><input type="number"" min="1"></td>
+                                    <td><span>删除</span></td>
+                                </tr>`
+                        }
+                 }
+             }
+
+             this.tbody.innerHTML = str;
+        }
+        addEvent(){
+            var that = this;
+            this.tbody.addEventListener("click",function(eve){
+                if(eve.target.tagName == "SPAN"){
+                    that.id = eve.target.parentNode.parentNode.getAttribute("index");
+                    eve.target.parentNode.parentNode.remove();
+                    that.removeCookie();
+                }
+            })
+            this.tbody.addEventListener("input",function(eve){
+                if(eve.target.tagName == "INPUT"){
+                    that.id = eve.target.parentNode.parentNode.getAttribute("index");
+                    that.value = eve.target.value;
+                    that.changeCookie();
+                }
+            })
+        }
+        removeCookie(){
+            for(var i=0;i<this.goods.length;i++){
+                if(this.goods[i].id === this.id){
+                    this.goods.splice(i,1);
+                }
+            }
+            setCookie("goods",JSON.stringify(this.goods))
+        }
+        changeCookie(){
+            for(var i=0;i<this.goods.length;i++){
+                if(this.goods[i].id === this.id){
+                    this.goods[i].num =this.value;
+                }
+            }
+            setCookie("goods",JSON.stringify(this.goods))
+        }
+    
+  }
+    new Car({
+        url:"http://localhost/tian/den/goods.json",
+        tbody:document.querySelector("tbody")
+    })
+
+
+</script>
+</html>

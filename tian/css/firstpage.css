@@ -52,10 +52,10 @@ nav .app a:hover{color:red;}
 #list .banner1:hover .btns input{display: block;}
 
 #list .loge{width:190px;height:250px;float:right;}
-#list .loge img{width:190px;height:250px;position: absolute;top:200px;right:220px;}
+#list .loge img{width:190px;height:250px;position: absolute;top:200px;right:219px;}
 
 
-#list .seek{width:184px;height:178px;background:#fff;padding:0 3px;position: absolute;right:220px;top:460px;}
+#list .seek{width:184px;height:178px;background:#fff;padding:0 3px;position: absolute;right:219px;top:460px;}
 #list .seek h4{font:16px/38px "";color:#000;border-bottom:1px solid #ccc;}
 #list .seek p {font:12px/20px "";padding:4px 0;}
 #list .seek p:hover{color: red;}
@@ -107,6 +107,32 @@ nav .app a:hover{color:red;}
 #life .life-c ul li {width:190px;height:236px;border:1px dashed  #e7e7e7;float: left;border-top:none;}
 #life .life-c ul li.te{border-bottom: none;}
 .life-c .life-c-1:nth-child(1){display: block;}
+
+
+
+
+#dress{width:1190px;height:555px;overflow: hidden;margin-top:40px;}
+#dress .dress-a h3{font:20px/37px "";float: left;width:190px;}
+#dress .dress-a{height:37px;border-bottom:1px solid #948037;}
+#dress .dress-a ul{float: left;}
+#dress .dress-a ul li{float: left;color:#000;font:13px/37px "";width:195px;text-align: center;}
+#dress .dress-a ul li:hover a{display:block;width:100px;background:#948037;height:37px;text-align: center;margin:0 42px;}
+
+
+#dress .dress-b{height:555px;width:360px;float: left;background:#e7e7e7;margin:8px 10px 0 0 ;overflow: hidden;}
+#dress .dress-b .dress-b-2{height:380px; width:360px;overflow: hidden;position: relative;}
+#dress .dress-b .dress-b-2 .te{position: absolute;left:355px;}
+#dress .dress-b .dress-b-2 img{height:380px; width:360px;float: left;margin-bottom: 10px;position: absolute;}
+#dress .dress-b .dress-b-1{height:148px;}
+#dress .dress-b ul li {float: left;font:13px/34px "";width:80px;text-align: center;background:#fff;margin:4px 2px;}
+
+#dress .dress-c{width:800px;height:515px;margin-top:8px;float:right;margin-bottom:30px;}
+#dress .dress-c img{width:190px;height:246px;}
+#dress .dress-c ul li {width:190px;height:266px;border:1px dashed  #e7e7e7;float: left;border-top:none;}
+#dress .dress-c ul li.te{border-bottom: none;}
+.dress-c .dress-c-1:nth-child(1){display: block;}
+
+
 
 
 #map{height:282px;margin-top:40px;border-top:2px solid #000;overflow: hidden;}
